@@ -8,9 +8,27 @@
 \usepackage[english]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+
+\lstdefinelanguage{Kotlin}{
+    comment=[l]{//},
+    commentstyle={\color{gray}\ttfamily},
+    emph={filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println},
+    emphstyle={\color{OrangeRed}},
+    identifierstyle=\color{black},
+    keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch, class, companion, const, constructor, continue, crossinline, data, delegate, do, dynamic, else, enum, expect, external, false, field, file, final, finally, for, fun, get, if, import, in, infix, init, inline, inner, interface, internal, is, lateinit, noinline, null, object, open, operator, out, override, package, param, private, property, protected, public, receiveris, reified, return, return@, sealed, set, setparam, super, suspend, tailrec, this, throw, true, try, typealias, typeof, val, var, vararg, when, where, while},
+    keywordstyle={\color{NavyBlue}\bfseries},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[s]{"""*}{*"""},
+    ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+    ndkeywordstyle={\color{BurntOrange}\bfseries},
+    sensitive=true,
+    stringstyle={\color{ForestGreen}\ttfamily},
+}
 
 \title{"Hello world!" or how did I learn to write programs}
 \author{Saveliy "Savcheg" Demchenko}
@@ -23,7 +41,8 @@
 
     \section{Code explanation}
     Here it is.
-    I've written absolutely common "hello world" application on Kotlin:
+    I've written absolutely common "hello world" application on Kotlin:\marginpar[Note 2: text for left-hand side text]
+    {\raggedright Note 2: text for right-hand side of pages, it is not justified, but uses \texttt{\string\raggedright}.}
     \begin{lstlisting}[language=Kotlin,label={lst:lstlisting}]
             fun main(args: Array<String>) {
                 println("Hello, World!")
@@ -37,20 +56,32 @@
 
     \begin{figure}[!h]
         \centering
-        \includegraphics[width=0.3\textwidth]{img/mascot-main.png}
+        \includegraphics[width=0.3\textwidth]{img/mascot-main}
         \caption{\label{fig:mascot}This is mascot of Kotlin created by JetBrains.}
     \end{figure}
 
     \subsection{Table}
 
+    \footnote{It was just random table}
     \begin{table}[-h]
         \centering
         \begin{tabular}{l|r}
-            Item & Quantity \\\hline
-            Widgets & 42 \\
+            Item    & Quantity \\\hline
+            Widgets & 42       \\
             Gadgets & 13
         \end{tabular}
         \caption{\label{tab:widgets}An example table.}
     \end{table}
+
+
+    \section{Math}
+    \[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+    = \frac{1}{n}\sum_{i}^{n} X_i\]
+
+
+    \section{Bio}
+    \cite{greenwade93}
+    \bibliographystyle{alpha}
+    \bibliography{sample_bio}
 
 \end{document}
