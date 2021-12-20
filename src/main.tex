@@ -12,6 +12,7 @@
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{biblatex}
 
 \lstdefinelanguage{Kotlin}{
     comment=[l]{//},
@@ -80,8 +81,14 @@
 
 
     \section{Bio}
-    \cite{greenwade93}
-    \bibliographystyle{alpha}
-    \bibliography{sample_bio}
+    \begin{thebibliography}{9}
 
+        \bibitem{lamport94}
+        Leslie Lamport,
+        \textit{\LaTeX: a document preparation system},
+        Addison Wesley, Massachusetts,
+        2nd edition,
+        1994.
+
+    \end{thebibliography}
 \end{document}
