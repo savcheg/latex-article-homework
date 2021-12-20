@@ -2,14 +2,31 @@
 %! Date = 20.12.2021
 
 % Preamble
-\documentclass[11pt]{article}
+\documentclass{article}
 
 % Packages
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+
+\title{"Hello world!" or how did I learn to write programs}
+\author{Saveliy "Savcheg" Demchenko}
 
 % Document
 \begin{document}
 
+\maketitle
+
+
+    \begin{code_explaination}
+        Here it is.
+        I've written absolutely common "hello world" application on Kotlin:
+        \begin{lstlisting}[language=Kotlin,label={lst:lstlisting}]
+            fun main(args: Array<String>) {
+                println("Hello, World!")
+            }
+        \end{lstlisting}
+    \end{code_explaination}
 
 
 \end{document}
