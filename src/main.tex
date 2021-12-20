@@ -18,21 +18,39 @@
 % Document
 \begin{document}
 
-\maketitle
+    \maketitle
 
-\section{Code explanation}
-        Here it is.
-        I've written absolutely common "hello world" application on Kotlin:
-        \begin{lstlisting}[language=Kotlin,label={lst:lstlisting}]
+
+    \section{Code explanation}
+    Here it is.
+    I've written absolutely common "hello world" application on Kotlin:
+    \begin{lstlisting}[language=Kotlin,label={lst:lstlisting}]
             fun main(args: Array<String>) {
                 println("Hello, World!")
             }
-        \end{lstlisting}
+    \end{lstlisting}
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.3\textwidth]{img/mascot-main.png}
-    \caption{\label{fig:mascot}This is mascot of Kotlin created by JetBrains.}
-\end{figure}
+
+    \section{Captions and tables}
+
+    \subsection{Caption}
+
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{img/mascot-main.png}
+        \caption{\label{fig:mascot}This is mascot of Kotlin created by JetBrains.}
+    \end{figure}
+
+    \subsection{Table}
+
+    \begin{table}[-h]
+        \centering
+        \begin{tabular}{l|r}
+            Item & Quantity \\\hline
+            Widgets & 42 \\
+            Gadgets & 13
+        \end{tabular}
+        \caption{\label{tab:widgets}An example table.}
+    \end{table}
 
 \end{document}
